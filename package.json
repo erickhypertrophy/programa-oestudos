@@ -1,0 +1,16 @@
+{
+  "name": "por-dentro-do-computador",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Curso interativo em português do Brasil sobre fundamentos da computação — dos bits e portas lógicas à CPU e programação em JavaScript.",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "build": "node scripts/build-singlefile.mjs",
+    "check": "node scripts/build-singlefile.mjs --check",
+    "test": "node tests/verify.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

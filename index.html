@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Curso interativo em português: dos bits a programas que funcionam, com laboratórios, prática, revisão espaçada e projetos.">
+  <title>Por Dentro do Computador — curso interativo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Por Dentro do Computador, início">
+        <span class="brand-mark">∴</span><span><strong>POR DENTRO</strong><small>computação sem magia</small></span>
+      </a>
+      <div class="side-label">SUA JORNADA</div>
+      <nav class="primary-nav">
+        <button class="nav-item active" data-route="inicio"><span class="nav-icon">⌂</span> Visão geral</button>
+        <button class="nav-item" data-route="curso"><span class="nav-icon">▤</span> Trilha de aprendizagem <span class="nav-count" id="nav-phases">13</span></button>
+        <button class="nav-item" data-route="revisao"><span class="nav-icon">↻</span> Revisão espaçada <span class="nav-count" id="due-count">0</span></button>
+        <button class="nav-item" data-route="laboratorio"><span class="nav-icon">⌘</span> Laboratório de código</button>
+        <button class="nav-item" data-route="glossario"><span class="nav-icon">Aa</span> Glossário</button>
+        <button class="nav-item" data-route="progresso"><span class="nav-icon">↗</span> Meu progresso</button>
+      </nav>
+      <div class="side-bottom">
+        <div class="progress-mini"><div class="mini-top"><span>Progresso geral</span><strong id="mini-percent">0%</strong></div><div class="progress-track"><span id="mini-bar" style="width:0%"></span></div><small id="mini-caption">Seu primeiro passo começa aqui.</small></div>
+        <div class="side-note"><span class="note-dot"></span><span>Funciona offline.<br>Servidor local salva o progresso automaticamente.</span></div>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir navegação" aria-expanded="false">☰</button>
+        <div class="breadcrumbs"><span>APRENDIZADO</span><span class="crumb-slash">/</span><strong id="crumb-current">Visão geral</strong></div>
+        <div class="top-actions"><span class="offline-pill"><span></span> funciona offline</span><button class="avatar-button" id="profile-button" title="Editar como deseja ser chamado" aria-label="Editar nome">E</button></div>
+      </header>
+      <main id="main" tabindex="-1"><div class="loading-state">Preparando sua trilha de aprendizagem…</div></main>
+      <footer class="footer"><span>POR DENTRO DO COMPUTADOR</span><span>Aprender é conseguir explicar, prever e construir.</span><button data-route="fontes">Fontes e método</button></footer>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
