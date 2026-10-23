@@ -1,0 +1,17 @@
+# Dependências e artefatos locais
+node_modules/
+.npm/
+.cache/
+
+# Arquivos temporários e de sistema operacional
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+*~
+
+# Ambiente e logs
+.env
+.env.*
+*.log

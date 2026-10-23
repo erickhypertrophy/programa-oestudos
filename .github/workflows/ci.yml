@@ -1,0 +1,26 @@
+name: CI — Verificação do Curso
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  verify:
+    name: Testar conteúdo, quizzes, CPU e build single-file
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verificar sincronização do arquivo único (Por-Dentro-do-Computador.html)
+        run: npm run check
+
+      - name: Executar suíte de verificação (tests/verify.mjs)
+        run: npm test
